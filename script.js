@@ -1,15 +1,9 @@
-// Prosta interakcja: rozwijane menu i aktualny rok w stopce
+// Basic interactions: set current year and handle contact form submission
 document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-    menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-    });
-
-    // Ustaw aktualny rok w stopce
+    // Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Obsługa formularza
+    // Handle contact form
     const form = document.getElementById('contact-form');
     form.addEventListener('submit', (e) => {
         e.preventDefault();
