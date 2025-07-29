@@ -3,53 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moje Portfolio</title>
+    <title>Portfolio Bartłomieja Konkla</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Moje Portfolio</h1>
-        <nav id="nav">
-            <button id="menu-toggle">☰</button>
-            <ul id="menu" class="hidden">
-                <li><a href="#about">O mnie</a></li>
-                <li><a href="#projects">Projekty</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo-nav">
+                <img src="data:image/png;base64,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" alt="BK logo" class="logo">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="#about">O mnie</a></li>
+                        <li><a href="#skills">Umiejętności</a></li>
+                        <li><a href="#projects">Realizacje</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
-    <section id="about">
-        <h2>O mnie</h2>
-        <p>Cześć! Jestem przyszłym programistą i przedstawiam swoje portfolio.</p>
+    <section id="hero" class="hero">
+        <div class="container hero-content">
+            <h1>Cześć, jestem Bartłomiej Konkel</h1>
+            <p>Tworzę strony internetowe, które zachwycają i inspirują.</p>
+            <a href="#projects" class="btn-primary">Zobacz moje projekty</a>
+        </div>
     </section>
 
-    <section id="projects">
-        <h2>Projekty</h2>
-        <div class="project-list">
-            <div class="project-card">
-                <h3>Projekt 1</h3>
-                <p>Opis projektu numer jeden.</p>
-            </div>
-            <div class="project-card">
-                <h3>Projekt 2</h3>
-                <p>Opis projektu numer dwa.</p>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>O mnie</h2>
+            <p>Jestem front‑end deweloperem z pasją do tworzenia interaktywnych i atrakcyjnych aplikacji internetowych. Mam solidne podstawy w HTML, CSS oraz JavaScript i czerpię radość z zamiany skomplikowanych problemów w proste, intuicyjne rozwiązania projektowe.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Umiejętności</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="icon">🧠</div>
+                    <h3>Problem solving</h3>
+                </div>
+                <div class="skill-item">
+                    <div class="icon">&lt;/&gt;</div>
+                    <h3>HTML &amp; CSS</h3>
+                </div>
+                <div class="skill-item">
+                    <div class="icon">JS</div>
+                    <h3>JavaScript</h3>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Kontakt</h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Twoje imię" required>
-            <input type="email" placeholder="Twój e-mail" required>
-            <textarea placeholder="Wiadomość" required></textarea>
-            <button type="submit">Wyślij</button>
-        </form>
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Realizacje</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Nazwa projektu</h3>
+                    <p>Krótki opis realizacji.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Nazwa projektu</h3>
+                    <p>Krótki opis realizacji.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Nazwa projektu</h3>
+                    <p>Krótki opis realizacji.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Moje Portfolio</p>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <form id="contact-form">
+                <input type="text" placeholder="Twoje imię" required>
+                <input type="email" placeholder="Twój e-mail" required>
+                <textarea placeholder="Wiadomość" required></textarea>
+                <button type="submit">Wyślij</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Bartłomiej Konkel</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
