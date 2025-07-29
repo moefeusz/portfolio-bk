@@ -64,13 +64,37 @@ body {
     background: radial-gradient(circle at top left, rgba(0,255,128,0.3), transparent 70%);
 }
 
-.hero-content h1 {
+/* Flex layout for hero section */
+.hero .hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1 1 50%;
+}
+
+.hero-image {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+.hero-text h1 {
     font-size: 2.8rem;
     margin-bottom: 20px;
     color: var(--primary-color);
 }
 
-.hero-content p {
+.hero-text p {
     font-size: 1.2rem;
     margin-bottom: 30px;
     max-width: 600px;
@@ -148,6 +172,15 @@ body {
     color: var(--primary-color);
 }
 
+/* Project images */
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    height: auto;
+    box-shadow: 0 0 15px rgba(0, 255, 128, 0.2);
+}
+
 .project-card p {
     font-size: 0.95rem;
 }
@@ -197,5 +230,14 @@ body {
     .navigation ul {
         gap: 20px;
         flex-wrap: wrap;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+        align-items: center;
     }
 }
