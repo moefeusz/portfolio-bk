@@ -228,9 +228,7 @@ body {
 
 /* Hide state for filtering */
 .project-card.hide {
-    opacity: 0;
-    transform: translateY(20px);
-    pointer-events: none;
+    display: none;
 }
 
 /* Contact section */
