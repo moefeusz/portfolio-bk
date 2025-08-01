@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Bartłomieja Konkla</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo-nav">
+                <img src="logo_100.png" alt="BK logo" class="logo">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="#about">O mnie</a></li>
+                        <li><a href="#skills">Umiejętności</a></li>
+                        <li><a href="#projects">Realizacje</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero section with video logo -->
+    <section id="hero" class="hero">
+        <div class="container hero-flex">
+            <div class="hero-text">
+                <h1>Cześć, jestem Bartłomiej Konkel</h1>
+                <p>Tworzę wizualizacje, aranżacje wnętrz, loga i layouty stron, a także implementuję je w kodzie – tak, aby Twoje projekty zachwycały i inspirowały.</p>
+                <a href="#projects" class="btn-primary">Zobacz moje realizacje</a>
+            </div>
+            <div class="hero-image">
+                <video src="hero_logo_video.mp4" autoplay loop muted playsinline class="hero-logo-video"></video>
+            </div>
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>O mnie</h2>
+            <p>Jestem front‑end deweloperem i designerem, który łączy technologię z wizją artystyczną. Specjalizuję się w tworzeniu realistycznych wizualizacji 3D, funkcjonalnych aranżacji wnętrz, projektowaniu charakterystycznych logotypów oraz opracowywaniu layoutów stron. Dzięki znajomości HTML, CSS i JavaScript zamieniam projekty w działające aplikacje. Jeśli szukasz kogoś, kto kompleksowo poprowadzi Twój projekt – od koncepcji po finalny kod – dobrze trafiłeś.</p>
+        </div>
+    </section>
+
+    <!-- Skills section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Umiejętności</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="icon">🧠</div>
+                    <h3>Problem solving</h3>
+                </div>
+                <div class="skill-item">
+                    <div class="icon">&lt;/&gt;</div>
+                    <h3>HTML &amp; CSS</h3>
+                </div>
+                <div class="skill-item">
+                    <div class="icon">JS</div>
+                    <h3>JavaScript</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects section with categories -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Realizacje</h2>
+            <!-- Category buttons -->
+            <div class="projects-categories">
+                <button class="category-btn active" data-category="all">Wszystkie</button>
+                <button class="category-btn" data-category="aranżacje">Aranżacje</button>
+                <button class="category-btn" data-category="loga">Loga</button>
+                <button class="category-btn" data-category="layouty">Layouty</button>
+                <button class="category-btn" data-category="szablony">Szablony</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Aranżacje: balkony i kuchnie -->
+                <div class="project-card" data-category="aranżacje">
+                    <img src="realizacja_balkon_ok.png" alt="Przytulny balkon" class="project-image">
+                    <h3>Przytulny balkon</h3>
+                    <p>Balkon z bambusową osłoną, wygodnymi fotelami i zielonymi akcentami w sercu miasta.</p>
+                </div>
+                <div class="project-card" data-category="aranżacje">
+                    <img src="realizacja_balkon_tropikalny.png" alt="Egzotyczny balkon" class="project-image">
+                    <h3>Egzotyczny balkon</h3>
+                    <p>Aranżacja balkonu z bujną zielenią i tropikalnymi dekoracjami.</p>
+                </div>
+                <div class="project-card" data-category="aranżacje">
+                    <img src="realizacja_kuchnia_minimalistyczna.png" alt="Minimalistyczna kuchnia" class="project-image">
+                    <h3>Minimalistyczna kuchnia</h3>
+                    <p>Nowoczesna kuchnia w ciemnych barwach z jasnym blatem i prostą formą.</p>
+                </div>
+                <div class="project-card" data-category="aranżacje">
+                    <img src="realizacja_kuchnia_przemyslowa.png" alt="Industrialna kuchnia" class="project-image">
+                    <h3>Industrialna kuchnia</h3>
+                    <p>Kuchnia z ceglaną ścianą, czarnymi frontami i loftowym klimatem.</p>
+                </div>
+                <div class="project-card" data-category="aranżacje">
+                    <img src="realizacja_kuchnia_rustykalna.png" alt="Rustykalna kuchnia" class="project-image">
+                    <h3>Rustykalna kuchnia</h3>
+                    <p>Przytulna kuchnia w drewnianych tonach z naturalnymi materiałami.</p>
+                </div>
+                <!-- Layouty: makiety Lęborka -->
+                <div class="project-card" data-category="layouty">
+                    <img src="realizacja_lebork_dzien.png" alt="Makieta Lęborka – dzień" class="project-image">
+                    <h3>Makieta Lęborka – dzień</h3>
+                    <p>Dzień w makiecie 3D Lęborka z realistycznymi detalami.</p>
+                </div>
+                <div class="project-card" data-category="layouty">
+                    <img src="realizacja_lebork_noc.png" alt="Makieta Lęborka – noc" class="project-image">
+                    <h3>Makieta Lęborka – noc</h3>
+                    <p>Nocna wersja makiety 3D z fajerwerkami i iluminacją.</p>
+                </div>
+                <!-- Loga -->
+                <div class="project-card" data-category="loga">
+                    <img src="realizacja_logo_hightech.png" alt="Logo cyberpunk" class="project-image">
+                    <h3>Logo cyberpunk</h3>
+                    <p>Nowoczesne logo BK w stylu cyberpunku.</p>
+                </div>
+                <div class="project-card" data-category="loga">
+                    <img src="realizacja_logo_variacje.png" alt="Wariacje logo BK" class="project-image">
+                    <h3>Wariacje logo BK</h3>
+                    <p>Zestaw propozycji logotypów BK w różnych kształtach.</p>
+                </div>
+                <!-- Szablony: placeholder -->
+                <div class="project-card" data-category="szablony">
+                    <img src="logo_100.png" alt="Szablon strony" class="project-image">
+                    <h3>Szablon strony</h3>
+                    <p>Przykładowy szablon strony internetowej – wkrótce więcej!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <form id="contact-form">
+                <input type="text" placeholder="Twoje imię" required>
+                <input type="email" placeholder="Twój e-mail" required>
+                <textarea placeholder="Wiadomość" required></textarea>
+                <button type="submit">Wyślij</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Bartłomiej Konkel</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
