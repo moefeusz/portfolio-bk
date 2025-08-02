@@ -1,4 +1,6 @@
-// Basic interactions: set current year, handle contact form submission and category filtering
+import { pricingData } from './pricing-data.js';
+
+// Basic interactions: set current year, handle contact form submission, category filtering and pricing table
 document.addEventListener('DOMContentLoaded', () => {
     // Set current year in footer
     const yearSpan = document.getElementById('year');
@@ -36,4 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Populate pricing table
+    const pricingTableBody = document.querySelector('#pricing-table tbody');
+    if (pricingTableBody) {
+        pricingData.forEach(item => {
+            const row = document.createElement('tr');
+            [item.plan, item.price, item.quote].forEach(text => {
+                const td = document.createElement('td');
+                td.textContent = text;
+                row.appendChild(td);
+            });
+            pricingTableBody.appendChild(row);
+        });
+    }
 });
