@@ -9,7 +9,7 @@
     <meta property="og:title" content="Portfolio | Front‑end Developer & 3D Designer">
     <meta property="og:description" content="Profesjonalne usługi front‑end development i 3D design. Od koncepcji po finalny kod.">
     <meta property="og:type" content="website">
-    <title>Portfolio | Front‑end Developer & 3D Designer</title>
+    <title>Portfolio Bartłomieja Konkla</title>
 
     <!-- Fonts optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -581,6 +581,20 @@
             font-size: 0.8rem;
             font-weight: 600;
         }
+            /* Bar chart for pricing section */
+            .pricing-chart {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                align-items: flex-end;
+                height: 160px;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+            .pricing-chart .bar {
+                flex: 1;
+                border-radius: 6px;
+            }
         .pricing-title {
             font-family: 'Orbitron', monospace;
             font-size: 1.5rem;
@@ -797,7 +811,7 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="logo">PORTFOLIO</div>
+            <div class="logo"><img src="logo_100.png" alt="BK logo" class="logo-img"></div>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">O mnie</a></li>
@@ -817,12 +831,11 @@
         <div class="hero-content">
             <div class="hero-logo">
                 <video autoplay muted loop playsinline webkit-playsinline>
-                    <!-- Podmień źródło wideo na własny plik wideo lub animację logo -->
-                    <source src="https://cdn1.genspark.ai/user-upload-image/jupyter/tooluse_gpW-BFA5R-2uIXV1t2gvpQ/output/portfolio_logo.mp4" type="video/mp4">
+                    <source src="hero_logo_video.mp4" type="video/mp4">
                 </video>
             </div>
-            <h1>Front‑end Developer & 3D Designer</h1>
-            <p>Łączę technologię z wizją artystyczną, tworząc innowacyjne rozwiązania cyfrowe</p>
+            <h1>Cześć, jestem Bartłomiej Konkel</h1>
+            <p>Tworzę wizualizacje, aranżacje wnętrz, loga i layouty stron, a także implementuję je w kodzie – tak, aby Twoje projekty zachwycały i inspirowały.</p>
             <div>
                 <a href="#portfolio" class="btn">Zobacz Portfolio</a>
                 <a href="#contact" class="btn btn-secondary">Skontaktuj się</a>
@@ -928,39 +941,43 @@
 
     <!-- Pricing Section -->
     <section id="pricing" class="pricing">
-        <h2 class="section-title">Cennik</h2>
+        <h2 class="section-title">Cennik tworzenia stron internetowych, logo i grafiki – 2025</h2>
+        <!-- wykres słupkowy – prosty bar chart -->
+        <div class="pricing-chart">
+            <div class="bar" style="height:80%; background: linear-gradient(to top, var(--neon-purple), var(--neon-cyan));" title="Strona wizytówka 1800 zł"></div>
+            <div class="bar" style="height:35%; background: linear-gradient(to top, var(--neon-cyan), var(--neon-blue));" title="Logo 800 zł"></div>
+            <div class="bar" style="height:7%; background: linear-gradient(to top, var(--neon-green), var(--neon-cyan));" title="Grafika/baner 160 zł"></div>
+            <div class="bar" style="height:20%; background: linear-gradient(to top, var(--neon-blue), var(--neon-green));" title="Opieka WP 60 zł/mies."></div>
+        </div>
         <div class="pricing-grid">
-            <div class="pricing-card">
-                <h3 class="pricing-title">BASIC</h3>
-                <div class="pricing-price">1500<sup style="font-size: 1rem;">zł</sup></div>
+            <article class="pricing-card">
+                <div class="icon-wrap"><i class="fa-solid fa-globe"></i></div>
+                <h3 class="pricing-title">Strona wizytówka</h3>
+                <div class="pricing-price">1 800<sup style="font-size: 1rem;">zł</sup></div>
+                <div class="pricing-period">za stronę</div>
+                <p class="desc">Responsywna, szybka, zoptymalizowana pod SEO witryna.</p>
+            </article>
+            <article class="pricing-card">
+                <div class="icon-wrap"><i class="fa-solid fa-signature"></i></div>
+                <h3 class="pricing-title">Logo</h3>
+                <div class="pricing-price">800<sup style="font-size: 1rem;">zł</sup></div>
                 <div class="pricing-period">za projekt</div>
-                <ul class="pricing-features">
-                    <li>Landing Page (1 strona)</li>
-                    <li>Responsywny design</li>
-                    <li>Podstawowe animacje CSS</li>
-                    <li>Optymalizacja SEO</li>
-                    <li>2 poprawki włączone</li>
-                    <li>Czas realizacji: 7‑10 dni</li>
-                </ul>
-                <a href="#contact" class="btn">Wybierz pakiet</a>
-            </div>
-            <div class="pricing-card featured">
-                <h3 class="pricing-title">PREMIUM</h3>
-                <div class="pricing-price">3500<sup style="font-size: 1rem;">zł</sup></div>
+                <p class="desc">Unikalne logo w kilku wariantach kolorystycznych.</p>
+            </article>
+            <article class="pricing-card">
+                <div class="icon-wrap"><i class="fa-solid fa-image"></i></div>
+                <h3 class="pricing-title">Grafika / baner</h3>
+                <div class="pricing-price">160<sup style="font-size: 1rem;">zł</sup></div>
                 <div class="pricing-period">za projekt</div>
-                <ul class="pricing-features">
-                    <li>Strona wielosekcyjna (do 5 stron)</li>
-                    <li>Zaawansowane animacje</li>
-                    <li>Integracja z CMS</li>
-                    <li>Formularz kontaktowy</li>
-                    <li>Panel administracyjny</li>
-                    <li>5 poprawek włączonych</li>
-                    <li>Wsparcie techniczne 30 dni</li>
-                    <li>Czas realizacji: 14‑21 dni</li>
-                </ul>
-                <a href="#contact" class="btn">Wybierz pakiet</a>
-            </div>
-            <!-- Dodaj kolejne karty cennika według potrzeb -->
+                <p class="desc">Profesjonalne materiały do social mediów lub druku.</p>
+            </article>
+            <article class="pricing-card">
+                <div class="icon-wrap"><i class="fa-solid fa-shield-check"></i></div>
+                <h3 class="pricing-title">Opieka WP</h3>
+                <div class="pricing-price">60<sup style="font-size: 1rem;">zł/mies.</sup></div>
+                <div class="pricing-period">miesięcznie</div>
+                <p class="desc">Aktualizacje, kopie zapasowe, wsparcie techniczne.</p>
+            </article>
         </div>
     </section>
 
