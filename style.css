@@ -288,3 +288,82 @@ body {
         max-width: 300px;
     }
 }
+
+/* Pricing section */
+#cennik {
+    padding: 60px 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+#cennik .packages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#cennik .package {
+    flex: 1 1 250px;
+    max-width: 300px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 20px;
+    color: var(--text-color);
+}
+
+#cennik table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+#cennik th,
+#cennik td {
+    border: 1px solid var(--primary-color);
+    padding: 8px;
+    text-align: left;
+}
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(1, 9, 15, 0.8);
+    color: var(--text-color);
+}
+
+.modal-content {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+}
+
+/* Small screen adjustments */
+@media (max-width: 360px) {
+    #cennik .packages {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #cennik .package {
+        max-width: 100%;
+    }
+    #cennik table {
+        display: block;
+        overflow-x: auto;
+    }
+    .modal-content {
+        width: 90%;
+    }
+}
