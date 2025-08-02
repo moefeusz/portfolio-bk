@@ -231,6 +231,27 @@ body {
     display: none;
 }
 
+/* Pricing chart */
+.pricing {
+    padding: 80px 0;
+}
+
+.pricing h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.chart-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,255,128,0.2);
+}
+
 /* Contact section */
 .contact form {
     max-width: 500px;

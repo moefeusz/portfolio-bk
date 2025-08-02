@@ -36,4 +36,59 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Price comparison chart with intersection-triggered animation
+    const market = [3000, 2000, 400, 150];
+    const mine = [1200, 800, 160, 60];
+    const canvas = document.getElementById('priceChart');
+    if (canvas) {
+        const ctx = canvas.getContext('2d');
+        const labels = ['Strona WWW', 'Sklep online', 'Projekt logo', 'Wizytówka'];
+        const chartData = {
+            labels,
+            datasets: [
+                {
+                    label: 'Rynek',
+                    data: [0, 0, 0, 0],
+                    backgroundColor: '#444444'
+                },
+                {
+                    label: 'Twoja cena',
+                    data: [0, 0, 0, 0],
+                    backgroundColor: '#18d4c4'
+                }
+            ]
+        };
+
+        const priceChart = new Chart(ctx, {
+            type: 'bar',
+            data: chartData,
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                animation: {
+                    duration: 1000,
+                    easing: 'easeOutQuad'
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    priceChart.data.datasets[0].data = market;
+                    priceChart.data.datasets[1].data = mine;
+                    priceChart.update();
+                    obs.disconnect();
+                }
+            });
+        }, { threshold: 0.3 });
+
+        observer.observe(canvas.closest('section'));
+    }
 });
