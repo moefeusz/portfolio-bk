@@ -271,6 +271,133 @@ body {
     font-size: 0.9rem;
 }
 
+/* Pricing table */
+.cennik {
+    padding: 60px 0;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+.pricing-table th,
+.pricing-table td {
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    text-align: left;
+}
+
+.pricing-table th {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Packages grid */
+.packages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.package {
+    perspective: 1000px;
+}
+
+.package-inner {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.package:hover .package-inner,
+.package.flipped .package-inner {
+    transform: rotateY(180deg);
+}
+
+.package-front,
+.package-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.package-back {
+    transform: rotateY(180deg);
+}
+
+.package-front .price {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* FAQ accordion */
+.faq {
+    margin-top: 40px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 15px;
+    text-align: left;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 15px;
+    transition: transform 0.3s;
+}
+
+.faq-question.active {
+    background-color: var(--primary-color);
+    color: #00130d;
+}
+
+.faq-question.active::after {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    padding: 15px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .navigation ul {

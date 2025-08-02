@@ -36,4 +36,26 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Package flip on click (for touch devices)
+    const packages = document.querySelectorAll('.package');
+    packages.forEach(pkg => {
+        pkg.addEventListener('click', () => {
+            pkg.classList.toggle('flipped');
+        });
+    });
+
+    // FAQ accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            question.classList.toggle('active');
+            const answer = question.nextElementSibling;
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        });
+    });
 });
