@@ -29,7 +29,10 @@
             <div class="hero-text">
                 <h1>Cześć, jestem Bartłomiej Konkel</h1>
                 <p>Tworzę wizualizacje, aranżacje wnętrz, loga i layouty stron, a także implementuję je w kodzie – tak, aby Twoje projekty zachwycały i inspirowały.</p>
-                <a href="#projects" class="btn-primary">Zobacz moje realizacje</a>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn-primary">Zobacz moje realizacje</a>
+                    <a href="#cennik" class="btn-secondary">Sprawdź cennik</a>
+                </div>
             </div>
             <div class="hero-image">
                 <video src="hero_logo_video.mp4" autoplay loop muted playsinline class="hero-logo-video"></video>
@@ -137,6 +140,19 @@
         </div>
     </section>
 
+    <!-- Pricing section -->
+    <section id="cennik" class="pricing">
+        <div class="container">
+            <h2>Cennik</h2>
+            <div class="pricing-content">
+                <div class="pricing-text">
+                    <p>Robię dokładnie to samo…</p>
+                </div>
+                <canvas id="pricingChart"></canvas>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact section -->
     <section id="contact" class="contact">
         <div class="container">
@@ -156,6 +172,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

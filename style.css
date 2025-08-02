@@ -110,6 +110,12 @@ body {
     max-width: 600px;
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
 .btn-primary {
     display: inline-block;
     padding: 12px 24px;
@@ -125,6 +131,22 @@ body {
 
 .btn-primary:hover {
     background-color: #00d173;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 700;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: #00130d;
 }
 
 @keyframes pulse {
@@ -231,6 +253,27 @@ body {
     display: none;
 }
 
+/* Pricing section */
+.pricing-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pricing-text {
+    flex: 1 1 300px;
+}
+
+.pricing-content canvas {
+    flex: 1 1 300px;
+    max-width: 400px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 20px;
+}
+
 /* Contact section */
 .contact form {
     max-width: 500px;
@@ -286,5 +329,8 @@ body {
     }
     .hero-logo-video {
         max-width: 300px;
+    }
+    .pricing-content {
+        flex-direction: column;
     }
 }

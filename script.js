@@ -36,4 +36,30 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Pricing chart
+    const pricingCanvas = document.getElementById('pricingChart');
+    if (pricingCanvas && window.Chart) {
+        new Chart(pricingCanvas, {
+            type: 'bar',
+            data: {
+                labels: ['Pakiet A', 'Pakiet B', 'Pakiet C'],
+                datasets: [{
+                    label: 'Cena (PLN)',
+                    data: [1000, 2000, 3000],
+                    backgroundColor: 'rgba(0,255,128,0.5)',
+                    borderColor: 'rgba(0,255,128,1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
 });
