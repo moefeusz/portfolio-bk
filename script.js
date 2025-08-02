@@ -36,4 +36,20 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Toggle net/gross prices
+    const taxToggle = document.getElementById('tax-toggle');
+    if (taxToggle) {
+        const priceCells = document.querySelectorAll('#price-table .price');
+        taxToggle.addEventListener('change', () => {
+            priceCells.forEach(cell => {
+                const net = parseFloat(cell.dataset.net);
+                if (taxToggle.checked) {
+                    cell.innerText = (net * 1.23).toFixed(2);
+                } else {
+                    cell.innerText = net.toFixed(2);
+                }
+            });
+        });
+    }
 });
