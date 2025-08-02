@@ -36,4 +36,35 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Aftercare modal logic
+    const aftercareBtn = document.getElementById('aftercare-btn');
+    const aftercareModal = document.getElementById('aftercare-modal');
+    const aftercareClose = document.getElementById('aftercare-close');
+    const aftercareForm = document.getElementById('aftercare-form');
+
+    if (aftercareBtn && aftercareModal && aftercareClose) {
+        aftercareBtn.addEventListener('click', () => {
+            aftercareModal.classList.add('show');
+        });
+
+        aftercareClose.addEventListener('click', () => {
+            aftercareModal.classList.remove('show');
+        });
+
+        aftercareModal.addEventListener('click', (e) => {
+            if (e.target === aftercareModal) {
+                aftercareModal.classList.remove('show');
+            }
+        });
+    }
+
+    if (aftercareForm) {
+        aftercareForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Dziękuję! Wkrótce się skontaktuję.');
+            aftercareForm.reset();
+            aftercareModal.classList.remove('show');
+        });
+    }
 });
