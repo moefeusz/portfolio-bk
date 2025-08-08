@@ -1,240 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Krótki opis strony portfolio Bartłomieja Konkela">
-    <title>Portfolio – Bartłomiej Konkel</title>
-    <base href="./">
-    <!-- Preconnects for Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Import Poppins font for a modern look -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — BK (revamp-anim-A)</title>
+  <!-- Fonts A: Space Grotesk (heads) + Inter (text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Hero / landing section -->
-    <header id="hero" class="hero-section">
-        <div class="hero-content">
-            <!-- Video logo: autoplaying and muted -->
-            <video src="hero_logo_video.mp4" class="logo-video" autoplay loop muted playsinline></video>
-            <h1 class="hero-name">Bartłomiej&nbsp;Konkel</h1>
-            <!-- Subtitle will be populated by the typing effect in script.js; leave it empty so dynamic roles can be injected -->
-            <h2 id="typed-text" class="hero-subtitle"></h2>
-            <a href="#projects" class="btn btn-primary">Zobacz projekty</a>
-        </div>
-    </header>
+  <!-- Cursor aura -->
+  <div class="cursor-aura" aria-hidden="true"></div>
 
-    <!-- Sticky navigation -->
-    <nav id="main-nav" class="nav">
-        <ul>
-            <li><a href="#about">O&nbsp;mnie</a></li>
-            <li><a href="#services">Cennik</a></li>
-            <li><a href="#projects">Projekty</a></li>
-            <li><a href="#game">Hack the Code</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-        </ul>
-    </nav>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="brand">BK</a>
+      <nav class="menu">
+        <a href="#about">O mnie</a>
+        <a href="#pricing">Cennik</a>
+        <a href="#projects">Projekty</a>
+        <a href="#game">Hack the Code</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- About section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">O&nbsp;mnie</h2>
-            <p class="section-desc">
-                Jestem wszechstronnym front‑end developerem z zamiłowaniem do nowoczesnego designu i interaktywnych doświadczeń. 
-                Tworzę responsywne strony internetowe, aplikacje 3D oraz gry wykorzystujące JavaScript. Po godzinach bawię się też grafiką 3D i piszę własne narzędzia.<br>
-                <br>
-                Ten demo‑projekt pokazuje, jak mogą wyglądać Twoje realizacje — ciemny, elegancki motyw z neonowymi akcentami podkreśla kreatywność i profesjonalizm.
-            </p>
-        </div>
-    </section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <!-- podmień na <video> jeśli chcesz -->
+      <img src="hero_poster.jpg" alt="" onerror="this.style.display='none'">
+      <video src="hero_logo_video.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="hero-content reveal">
+      <h1 class="hero-title">Bartłomiej Konkel</h1>
+      <h2 id="typed-text" class="hero-subtitle"></h2>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary magnet">Zobacz projekty</a>
+        <a href="#contact" class="btn btn-ghost">Kontakt</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Services / pricing section -->
-    <section id="services" class="section alt-section">
-        <div class="container">
-            <h2 class="section-title">Cennik</h2>
-            <div class="cards-row">
-                <!-- Website package -->
-                <div class="card">
-                    <img src="icon-web.png" alt="Projekt strony internetowej" class="card-icon">
-                    <h3>Strona&nbsp;WWW</h3>
-                    <p>Profesjonalna, responsywna strona internetowa zaprojektowana od podstaw, z animacjami i optymalizacją SEO.</p>
-                    <p class="price">600&nbsp;zł</p>
-                    <a href="#contact" class="btn btn-secondary">Wybierz</a>
-                </div>
-                <!-- 3D design package -->
-                <div class="card">
-                    <img src="icon-3d.png" alt="Projekt 3D" class="card-icon">
-                    <h3>Projekt&nbsp;3D</h3>
-                    <p>Modelowanie i wizualizacja 3D dla wnętrz, produktów lub koncepcji, idealne do prezentacji Twoich pomysłów.</p>
-                    <p class="price">800&nbsp;zł</p>
-                    <a href="#contact" class="btn btn-secondary">Wybierz</a>
-                </div>
-                <!-- Coding package -->
-                <div class="card">
-                    <img src="icon-code.png" alt="Kodowanie aplikacji" class="card-icon">
-                    <h3>Aplikacja</h3>
-                    <p>Dedykowana aplikacja webowa dopasowana do potrzeb biznesu, z wykorzystaniem nowoczesnych technologii.</p>
-                    <p class="price">1000&nbsp;zł</p>
-                    <a href="#contact" class="btn btn-secondary">Wybierz</a>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- ABOUT -->
+  <section id="about" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">O mnie</h2>
+      <p>Front-end, logotypy, aranżacje i wizualizacje 3D. Szybko, estetycznie, technicznie. Pracuję z detalem i dbam o wydajność (Core Web Vitals).</p>
+    </div>
+  </section>
 
-    <!-- Projects section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">Projekty</h2>
-            <!-- Filter buttons for categories -->
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">Wszystkie</button>
-                <button class="filter-btn" data-filter="aranżacje">Aranżacje</button>
-                <button class="filter-btn" data-filter="logo">Logo</button>
-                <button class="filter-btn" data-filter="strony">Strony&nbsp;WWW</button>
-            </div>
-            <!-- Project cards grid -->
-            <div class="cards-row">
-                <!-- Aranżacje projects -->
-                <div class="project-card" data-category="aranżacje">
-                    <img src="realizacja_balkon_ok.png" alt="Balkon industrialny" class="project-img">
-                    <div class="project-info">
-                        <h3>Balkon&nbsp;Industrialny</h3>
-                        <p>Nowoczesny balkon z cegłą i czarnymi akcentami — przytulne miejsce na relaks.</p>
-                    </div>
-                </div>
-                <div class="project-card" data-category="aranżacje">
-                    <img src="realizacja_balkon_tropikalny.png" alt="Balkon tropikalny" class="project-img">
-                    <div class="project-info">
-                        <h3>Balkon&nbsp;Tropikalny</h3>
-                        <p>Energiczny balkon z elementami tropikalnej roślinności i żywymi kolorami.</p>
-                    </div>
-                </div>
-                <div class="project-card" data-category="aranżacje">
-                    <img src="realizacja_kuchnia_minimalistyczna.png" alt="Kuchnia minimalistyczna" class="project-img">
-                    <div class="project-info">
-                        <h3>Kuchnia&nbsp;Minimalistyczna</h3>
-                        <p>Przestronna kuchnia o minimalistycznym charakterze z prostymi liniami i eleganckimi frontami.</p>
-                    </div>
-                </div>
-                <div class="project-card" data-category="aranżacje">
-                    <img src="realizacja_kuchnia_przemyslowa.png" alt="Kuchnia przemysłowa" class="project-img">
-                    <div class="project-info">
-                        <h3>Kuchnia&nbsp;Przemysłowa</h3>
-                        <p>Surowa kuchnia inspirowana przemysłowym stylem, z metalowymi wykończeniami.</p>
-                    </div>
-                </div>
-                <div class="project-card" data-category="aranżacje">
-                    <img src="realizacja_kuchnia_rustykalna.png" alt="Kuchnia rustykalna" class="project-img">
-                    <div class="project-info">
-                        <h3>Kuchnia&nbsp;Rustykalna</h3>
-                        <p>Ciepła kuchnia z drewnianymi akcentami i rustykalnym klimatem do wspólnego gotowania.</p>
-                    </div>
-                </div>
-                <div class="project-card" data-category="aranżacje">
-                    <img src="realizacja_lebork_day.png" alt="Mieszkanie Lębork" class="project-img">
-                    <div class="project-info">
-                        <h3>Mieszkanie&nbsp;Lębork</h3>
-                        <p>Przestrzeń mieszkalna w Lęborku wykończona w nowoczesnym stylu z przytulnymi detalami.</p>
-                    </div>
-                </div>
-                <!-- Logo projects -->
-                <div class="project-card" data-category="logo">
-                    <img src="realizacja_logo_hightech.png" alt="Logo hightech" class="project-img">
-                    <div class="project-info">
-                        <h3>Logo&nbsp;HighTech</h3>
-                        <p>Nowoczesne logo dla firmy technologicznej, łączące prostotę z futurystycznym akcentem.</p>
-                    </div>
-                </div>
-                <div class="project-card" data-category="logo">
-                    <img src="realizacja_logo_variacje.png" alt="Logo Variacje" class="project-img">
-                    <div class="project-info">
-                        <h3>Logo&nbsp;Variacje</h3>
-                        <p>Kreatywny znak graficzny z wariacjami kolorystycznymi i geometrycznymi formami.</p>
-                    </div>
-                </div>
+  <!-- PRICING -->
+  <section id="pricing" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Cennik</h2>
+      <div class="cards-row">
+        <div class="pricing-card card">
+          <div class="icon">🌐</div>
+          <h3>Strona WWW</h3>
+          <p>Landing z animacjami i SEO.</p>
+          <div class="price">600 zł</div>
+          <a class="btn btn-primary">Wybierz pakiet →</a>
+        </div>
+        <div class="pricing-card card">
+          <div class="icon">🛠️</div>
+          <h3>Projekt 3D</h3>
+          <p>Wnętrza / produkt, realizm i światło.</p>
+          <div class="price">od 900 zł</div>
+          <a class="btn btn-primary">Wybierz pakiet →</a>
+        </div>
+        <div class="pricing-card card">
+          <div class="icon">✒️</div>
+          <h3>Logo</h3>
+          <p>Logotyp + podstawowa księga znaku.</p>
+          <div class="price">od 700 zł</div>
+          <a class="btn btn-primary">Wybierz pakiet →</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <!-- Additional logo project using personal BK logo -->
-                <div class="project-card" data-category="logo">
-                    <img src="logo_100.png" alt="Logo BK" class="project-img">
-                    <div class="project-info">
-                        <h3>Logo&nbsp;BK</h3>
-                        <p>Osobisty znak graficzny Bartłomieja, zaprojektowany w stylu geometrycznym z nowoczesnym sznytem.</p>
-                    </div>
-                </div>
-                <!-- Strony WWW projects -->
-                <div class="project-card" data-category="strony">
-                    <img src="project1.png" alt="Strona portfolio" class="project-img">
-                    <div class="project-info">
-                        <h3>Portfolio&nbsp;Artysty</h3>
-                        <p>Responsywna strona portfolio z galerią prac i sekcją o mnie w minimalistycznym stylu.</p>
-                    </div>
-                </div>
-                <div class="project-card" data-category="strony">
-                    <img src="project2.png" alt="Strona firmowa" class="project-img">
-                    <div class="project-info">
-                        <h3>Strona&nbsp;Firmowa</h3>
-                        <p>Biznesowa witryna firmy z sekcją ofert, realizacji i formularzem kontaktowym.</p>
-                    </div>
-                </div>
-                <div class="project-card" data-category="strony">
-                    <img src="project3.png" alt="Landing page" class="project-img">
-                    <div class="project-info">
-                        <h3>Landing&nbsp;Page</h3>
-                        <p>Nowoczesny landing page zaprojektowany do promocji aplikacji mobilnej lub wydarzenia.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- PROJECTS -->
+  <section id="projects" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Projekty</h2>
+      <div class="projects-filter">
+        <button class="active" data-filter="all">Wszystko</button>
+        <button data-filter="aranżacje">Aranżacje</button>
+        <button data-filter="logo">Logo</button>
+        <button data-filter="www">WWW</button>
+      </div>
+      <div class="cards-grid">
+        <!-- Przykładowe karty (podmień na swoje pliki) -->
+        <div class="project-card card" data-category="aranżacje">
+          <img class="project-img" src="realizacja_balkon_ok.png" alt="Balkon industrialny">
+          <div class="project-info"><h3>Balkon industrialny</h3></div>
+        </div>
+        <div class="project-card card" data-category="aranżacje">
+          <img class="project-img" src="realizacja_kuchnia_minimalistyczna.png" alt="Kuchnia minimalistyczna">
+          <div class="project-info"><h3>Kuchnia minimalistyczna</h3></div>
+        </div>
+        <div class="project-card card" data-category="logo">
+          <img class="project-img" src="realizacja_logo_higtech.png" alt="Logo HighTech">
+          <div class="project-info"><h3>Logo HighTech</h3></div>
+        </div>
+        <div class="project-card card" data-category="logo">
+          <img class="project-img" src="logo_100.png" alt="Logo BK">
+          <div class="project-info"><h3>Logo BK</h3></div>
+        </div>
+        <div class="project-card card" data-category="www">
+          <img class="project-img" src="realizacja_www_placeholder.png" alt="Strona WWW">
+          <div class="project-info"><h3>Strona WWW</h3></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Game section -->
-    <section id="game" class="section alt-section">
-        <div class="container">
-            <h2 class="section-title">Hack&nbsp;the&nbsp;Code</h2>
-            <p class="section-desc">Masz trzy próby, aby odgadnąć 5‑znakowy kod. Podpowiedź: ksywka od nazwiska.</p>
-              <div id="terminal" class="terminal">
-                  <div id="terminal-output" class="terminal-output"></div>
-                  <div class="terminal-input-row">
-                      <label for="terminal-input">Kod</label>
-                      <span class="prompt">&gt;</span>
-                      <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" placeholder="wpisz kod...">
-                      <button id="terminal-btn" class="btn btn-secondary">OK</button>
-                  </div>
-              </div>
-        </div>
-    </section>
+  <!-- GAME -->
+  <section id="game" class="section alt-section reveal">
+    <div class="container">
+      <h2 class="section-title">Hack the Code</h2>
+      <p class="section-desc">Masz trzy próby, aby odgadnąć <strong>5-znakowy</strong> kod. Podpowiedź: ksywka od nazwiska.</p>
+      <div class="terminal">
+        <div id="terminal-output"></div>
+        <div class="terminal-input">
+          <input id="terminal-input" type="text" placeholder="Wpisz kod…" maxlength="12"/>
+          <button id="terminal-submit" class="btn btn-primary">OK</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Kontakt</h2>
-            <p class="section-desc">Masz pomysł na projekt lub chcesz zadać pytanie? Skontaktuj się ze mną!</p>
-              <form id="contact-form" class="contact-form">
-                  <label for="contact-name">Imię i nazwisko</label>
-                  <input type="text" id="contact-name" name="name" placeholder="Imię i nazwisko" required>
+  <!-- CONTACT -->
+  <section id="contact" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Kontakt</h2>
+      <p>Wyślij brief lub odezwij się: <a href="mailto:hello@twojmail.pl">hello@twojmail.pl</a></p>
+    </div>
+  </section>
 
-                  <label for="contact-email">Email</label>
-                  <input type="email" id="contact-email" name="email" placeholder="Email" required>
+  <footer class="footer">
+    <div class="container">© BK</div>
+  </footer>
 
-                  <label for="contact-message">Wiadomość</label>
-                  <textarea id="contact-message" name="message" placeholder="Wiadomość" required></textarea>
-
-                  <button type="submit" class="btn btn-primary">Wyślij</button>
-              </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Bartłomiej Konkel &ndash; Portfolio. Wszystkie prawa zastrzeżone.</p>
-        </div>
-    </footer>
-
-    <!-- Container for confetti particles (injected by JS) -->
-    <div id="confetti-container"></div>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
