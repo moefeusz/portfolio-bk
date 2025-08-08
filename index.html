@@ -84,26 +84,93 @@
     <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title">Projekty</h2>
+            <!-- Filter buttons for categories -->
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">Wszystkie</button>
+                <button class="filter-btn" data-filter="aranżacje">Aranżacje</button>
+                <button class="filter-btn" data-filter="logo">Logo</button>
+                <button class="filter-btn" data-filter="strony">Strony&nbsp;WWW</button>
+            </div>
+            <!-- Project cards grid -->
             <div class="cards-row">
-                <div class="project-card">
-                    <img src="realizacja_balkon_ok.png" alt="Projekt balkonu z cegłą" class="project-img">
+                <!-- Aranżacje projects -->
+                <div class="project-card" data-category="aranżacje">
+                    <img src="realizacja_balkon_ok.png" alt="Balkon industrialny" class="project-img">
                     <div class="project-info">
                         <h3>Balkon&nbsp;Industrialny</h3>
-                        <p>Nowoczesny balkon w industrialnym stylu z cegłą i czarnymi akcentami — przytulne miejsce na relaks.</p>
+                        <p>Nowoczesny balkon z cegłą i czarnymi akcentami — przytulne miejsce na relaks.</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <img src="realizacja_kuchnia_minimalistyczna.png" alt="Minimalistyczna kuchnia" class="project-img">
+                <div class="project-card" data-category="aranżacje">
+                    <img src="realizacja_balkon_tropikalny.png" alt="Balkon tropikalny" class="project-img">
+                    <div class="project-info">
+                        <h3>Balkon&nbsp;Tropikalny</h3>
+                        <p>Energiczny balkon z elementami tropikalnej roślinności i żywymi kolorami.</p>
+                    </div>
+                </div>
+                <div class="project-card" data-category="aranżacje">
+                    <img src="realizacja_kuchnia_minimalistyczna.png" alt="Kuchnia minimalistyczna" class="project-img">
                     <div class="project-info">
                         <h3>Kuchnia&nbsp;Minimalistyczna</h3>
-                        <p>Jasna, przestronna kuchnia o minimalistycznym charakterze z prostymi liniami i eleganckimi frontami.</p>
+                        <p>Przestronna kuchnia o minimalistycznym charakterze z prostymi liniami i eleganckimi frontami.</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <img src="realizacja_kuchnia_rustykalna.png" alt="Rustykalna kuchnia" class="project-img">
+                <div class="project-card" data-category="aranżacje">
+                    <img src="realizacja_kuchnia_przemyslowa.png" alt="Kuchnia przemysłowa" class="project-img">
+                    <div class="project-info">
+                        <h3>Kuchnia&nbsp;Przemysłowa</h3>
+                        <p>Surowa kuchnia inspirowana przemysłowym stylem, z metalowymi wykończeniami.</p>
+                    </div>
+                </div>
+                <div class="project-card" data-category="aranżacje">
+                    <img src="realizacja_kuchnia_rustykalna.png" alt="Kuchnia rustykalna" class="project-img">
                     <div class="project-info">
                         <h3>Kuchnia&nbsp;Rustykalna</h3>
-                        <p>Ciepła kuchnia z drewnianymi akcentami i rustykalnym klimatem, idealna do wspólnego gotowania.</p>
+                        <p>Ciepła kuchnia z drewnianymi akcentami i rustykalnym klimatem do wspólnego gotowania.</p>
+                    </div>
+                </div>
+                <div class="project-card" data-category="aranżacje">
+                    <img src="realizacja_lebork_day.png" alt="Mieszkanie Lębork" class="project-img">
+                    <div class="project-info">
+                        <h3>Mieszkanie&nbsp;Lębork</h3>
+                        <p>Przestrzeń mieszkalna w Lęborku wykończona w nowoczesnym stylu z przytulnymi detalami.</p>
+                    </div>
+                </div>
+                <!-- Logo projects -->
+                <div class="project-card" data-category="logo">
+                    <img src="realizacja_logo_hightech.png" alt="Logo hightech" class="project-img">
+                    <div class="project-info">
+                        <h3>Logo&nbsp;HighTech</h3>
+                        <p>Nowoczesne logo dla firmy technologicznej, łączące prostotę z futurystycznym akcentem.</p>
+                    </div>
+                </div>
+                <div class="project-card" data-category="logo">
+                    <img src="realizacja_logo_variacje.png" alt="Logo Variacje" class="project-img">
+                    <div class="project-info">
+                        <h3>Logo&nbsp;Variacje</h3>
+                        <p>Kreatywny znak graficzny z wariacjami kolorystycznymi i geometrycznymi formami.</p>
+                    </div>
+                </div>
+                <!-- Strony WWW projects -->
+                <div class="project-card" data-category="strony">
+                    <img src="project1.png" alt="Strona portfolio" class="project-img">
+                    <div class="project-info">
+                        <h3>Portfolio&nbsp;Artysty</h3>
+                        <p>Responsywna strona portfolio z galerią prac i sekcją o mnie w minimalistycznym stylu.</p>
+                    </div>
+                </div>
+                <div class="project-card" data-category="strony">
+                    <img src="project2.png" alt="Strona firmowa" class="project-img">
+                    <div class="project-info">
+                        <h3>Strona&nbsp;Firmowa</h3>
+                        <p>Biznesowa witryna firmy z sekcją ofert, realizacji i formularzem kontaktowym.</p>
+                    </div>
+                </div>
+                <div class="project-card" data-category="strony">
+                    <img src="project3.png" alt="Landing page" class="project-img">
+                    <div class="project-info">
+                        <h3>Landing&nbsp;Page</h3>
+                        <p>Nowoczesny landing page zaprojektowany do promocji aplikacji mobilnej lub wydarzenia.</p>
                     </div>
                 </div>
             </div>
