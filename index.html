@@ -11,6 +11,32 @@
     <!-- Import Poppins font for a modern look -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+      <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Pricing cards styles and bar chart -->
+  <style>
+  /* --- Pricing cards --- */
+  .pricing-grid{display:grid;gap:2rem}
+  .pricing-card{background:#fff;border-radius:16px;padding:2.5rem 1.75rem;
+                box-shadow:0 10px 25px rgba(0,0,0,.08);
+                transition:transform .4s cubic-bezier(.2,.8,.2,1),
+                           box-shadow .4s}
+  .pricing-card:hover{transform:translateY(-6px);
+                      box-shadow:0 18px 35px rgba(0,0,0,.15)}
+  .icon-wrap{width:64px;height:64px;margin:0 auto 1rem;
+             display:flex;align-items:center;justify-content:center;
+             font-size:2rem;color:#fff;
+             border-radius:50%;
+             background:linear-gradient(135deg,#4f46e5,#14b8a6);
+             animation:pulse 3s ease-in-out infinite}
+  .price{font-size:1.5rem;font-weight:700;margin:.5rem 0 1rem}
+  .desc{opacity:.8;font-size:.9rem}
+  /* --- mini bar chart --- */
+  .pricing-chart .bar{flex:1;border-radius:6px;animation:grow 1.4s ease-out}
+  @keyframes grow{0%{height:0}100%{height:var(--h)}}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+  </style>e>
 </head>
 <body>
     <!-- Hero / landing section -->
@@ -185,7 +211,56 @@
                     </div>
                 </div>
             </div>
+  
+            <!-- Modern pricing – card layout -->
+    <section id="cennik-cards" class="cennik-cards py-16 lg:py-24">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl lg:text-4xl font-extrabold text-center mb-12">
+          Cennik tworzenia stron internetowych, logo i grafiki – 2025
+        </h2>
+
+        <!-- simple bar-chart – CSS only -->
+        <div class="pricing-chart mb-12 flex justify-center gap-2 h-40">
+          <!-- wysokość % = relatywna cena -->
+          <div class="bar bg-gradient-to-t from-rose-500 to-rose-300" style="height:80%" title="Strona wizytówka 1800 zł"></div>
+          <div class="bar bg-gradient-to-t from-sky-500  to-sky-300"  style="height:35%" title="Logo 800 zł"></div>
+          <div class="bar bg-gradient-to-t from-emerald-500 to-emerald-300" style="height:07%" title="Grafika/baner 160 zł"></div>
+          <div class="bar bg-gradient-to-t from-amber-500 to-amber-300"  style="height:20%" title="Opieka WP 60 zł/mies."></div>
         </div>
+
+        <div class="pricing-grid grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <article class="pricing-card group">
+            <div class="icon-wrap"><i class="fa-solid fa-globe"></i></div>
+            <h3 class="card-title">Strona wizytówka</h3>
+            <p class="price">od&nbsp;1&nbsp;800&nbsp;zł</p>
+            <p class="desc">Responsywna, szybka, zoptymalizowana pod SEO witryna.</p>
+          </article>
+
+          <article class="pricing-card group">
+            <div class="icon-wrap"><i class="fa-solid fa-signature"></i></div>
+            <h3 class="card-title">Logo</h3>
+            <p class="price">od&nbsp;800&nbsp;zł</p>
+            <p class="desc">Unikalne logo w kilku wariantach kolorystycznych.</p>
+          </article>
+
+          <article class="pricing-card group">
+            <div class="icon-wrap"><i class="fa-solid fa-image"></i></div>
+            <h3 class="card-title">Grafika / baner</h3>
+            <p class="price">od&nbsp;160&nbsp;zł</p>
+            <p class="desc">Profesjonalne materiały do social mediów lub druku.</p>
+          </article>
+
+          <article class="pricing-card group">
+            <div class="icon-wrap"><i class="fa-solid fa-shield-check"></i></div>
+            <h3 class="card-title">Opieka WP</h3>
+            <p class="price">od&nbsp;60&nbsp;zł/mies.</p>
+            <p class="desc">Aktualizacje, kopie zapasowe, wsparcie techniczne.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+</div>
     </section>
 
     <!-- Game section -->
