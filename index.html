@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio – Bartłomiej Konkel</title>
+    <!-- Preconnects for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Import Montserrat font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Hero / landing section -->
     <header id="hero" class="hero-section">
         <div class="hero-content">
+            <!-- Video logo: autoplaying and muted -->
+            <video src="hero_logo_video.mp4" class="logo-video" autoplay loop muted playsinline></video>
             <h1 class="hero-name">Bartłomiej&nbsp;Konkel</h1>
             <h2 id="typed-text" class="hero-subtitle">Front‑end Developer</h2>
             <a href="#projects" class="btn btn-primary">Zobacz projekty</a>
@@ -79,24 +86,24 @@
             <h2 class="section-title">Projekty</h2>
             <div class="cards-row">
                 <div class="project-card">
-                    <img src="project1.png" alt="Wizualizacja wnętrza" class="project-img">
+                    <img src="realizacja_balkon_ok.png" alt="Projekt balkonu z cegłą" class="project-img">
                     <div class="project-info">
-                        <h3>Wnętrze&nbsp;Loft</h3>
-                        <p>Nowoczesna wizualizacja loftu w ciemnej kolorystyce z industrialnymi dodatkami.</p>
+                        <h3>Balkon&nbsp;Industrialny</h3>
+                        <p>Nowoczesny balkon w industrialnym stylu z cegłą i czarnymi akcentami — przytulne miejsce na relaks.</p>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="project2.png" alt="Kształt 3D" class="project-img">
+                    <img src="realizacja_kuchnia_minimalistyczna.png" alt="Minimalistyczna kuchnia" class="project-img">
                     <div class="project-info">
-                        <h3>Futurystyczna&nbsp;Forma</h3>
-                        <p>Rendering abstrakcyjnej formy 3D w neonowych kolorach, symbolizujący nowoczesne projektowanie.</p>
+                        <h3>Kuchnia&nbsp;Minimalistyczna</h3>
+                        <p>Jasna, przestronna kuchnia o minimalistycznym charakterze z prostymi liniami i eleganckimi frontami.</p>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="project3.png" alt="Interfejs UI" class="project-img">
+                    <img src="realizacja_kuchnia_rustykalna.png" alt="Rustykalna kuchnia" class="project-img">
                     <div class="project-info">
-                        <h3>Kod&nbsp;i&nbsp;UI</h3>
-                        <p>Interfejs użytkownika z przykładowym kodem, pokazujący estetyczne podejście do front‑endu.</p>
+                        <h3>Kuchnia&nbsp;Rustykalna</h3>
+                        <p>Ciepła kuchnia z drewnianymi akcentami i rustykalnym klimatem, idealna do wspólnego gotowania.</p>
                     </div>
                 </div>
             </div>
@@ -107,7 +114,7 @@
     <section id="game" class="section alt-section">
         <div class="container">
             <h2 class="section-title">Hack&nbsp;the&nbsp;Code</h2>
-            <p class="section-desc">Masz trzy próby, aby odgadnąć 5‑cyfrowy kod. Wpisz <strong>konki</strong>, a zobaczysz, co się stanie.</p>
+            <p class="section-desc">Masz trzy próby, aby odgadnąć 5‑cyfrowy kod. Podpowiedź: ksywka od nazwiska.</p>
             <div id="terminal" class="terminal">
                 <div id="terminal-output" class="terminal-output"></div>
                 <div class="terminal-input-row">

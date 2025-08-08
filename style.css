@@ -3,7 +3,8 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Use Montserrat for a more professional look */
+    font-family: 'Montserrat', sans-serif;
     background-color: #0a0a0a;
     color: #e5e5e5;
     scroll-behavior: smooth;
@@ -55,6 +56,17 @@ a:hover {
     margin: 0.5rem 0 2rem 0;
     color: var(--accent-color);
     min-height: 1.6rem;
+}
+
+/* Video logo in hero section */
+.logo-video {
+    width: 120px;
+    height: auto;
+    margin: 0 auto 1rem auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 230, 184, 0.5);
+    opacity: 0.9;
 }
 
 .btn {
