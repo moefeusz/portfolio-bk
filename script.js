@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
      * Rotates through a set of job titles to show versatility.
      */
     const typedElement = document.getElementById('typed-text');
-    const roles = ['Front‑end Developer', '3D Designer', 'JavaScript Magician'];
+    const roles = ['Front‑end Developer', '3D Designer', 'JavaScript Magician', 'UI/UX Enthusiast'];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -85,8 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
      * Hack the Code game
      * User must guess a random 5‑digit code or trigger an easter egg.
      */
-    // Generate a random 5‑digit number between 10000 and 99999
-    let accessCode = Math.floor(Math.random() * 90000) + 10000;
+    // Generate a random 5‑character alphanumeric code
+    function generateCode() {
+        // Generate a random alphanumeric string and take the first 5 characters
+        return Math.random().toString(36).substring(2, 7).toLowerCase();
+    }
+    let accessCode = generateCode();
     let attemptsLeft = 3;
     const output = document.getElementById('terminal-output');
     const input = document.getElementById('terminal-input');
@@ -103,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function resetGame() {
         // reset code and attempts
-        accessCode = Math.floor(Math.random() * 90000) + 10000;
+        accessCode = generateCode();
         attemptsLeft = 3;
     }
 
@@ -124,13 +128,12 @@ document.addEventListener('DOMContentLoaded', () => {
             resetGame();
             return;
         }
-        // Validate input for a 5‑digit numeric code
-        if (!/^[0-9]{5}$/.test(guess)) {
-            printLine('Wprowadź 5‑cyfrowy kod.', '#ff4444');
+        // Validate input for a 5‑character alphanumeric code
+        if (!/^[a-zA-Z0-9]{5}$/.test(guess)) {
+            printLine('Wprowadź 5‑znakowy kod (litery i cyfry).', '#ff4444');
             return;
         }
-        const num = parseInt(guess, 10);
-        if (num === accessCode) {
+        if (guess.toLowerCase() === accessCode) {
             printLine('Access Granted! ✅', '#66ff66');
             printLine('Kod został złamany.', '#66ff66');
             resetGame();
@@ -219,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     // Initial prompt
-    printLine('System locked. Wprowadź 5‑cyfrowy kod dostępu.');
+    printLine('System locked. Wprowadź 5‑znakowy kod dostępu.');
 
     /* ---------------------------------------------------------------------
      * Contact form submission

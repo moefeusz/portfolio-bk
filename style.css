@@ -3,8 +3,8 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Use Montserrat for a more professional look */
-    font-family: 'Montserrat', sans-serif;
+    /* Use Poppins for a modern, clean look */
+    font-family: 'Poppins', sans-serif;
     background-color: #0a0a0a;
     color: #e5e5e5;
     scroll-behavior: smooth;
@@ -61,14 +61,15 @@ a:hover {
 /* Video logo in hero section */
 .logo-video {
     /* Enlarge the video logo and blend it with the background */
-    width: 300px;
+    width: 350px;
     height: auto;
     margin: 0 auto 2rem auto;
     display: block;
     border-radius: 16px;
-    box-shadow: 0 0 50px rgba(0, 230, 184, 0.8);
-    opacity: 0.9;
-    mix-blend-mode: screen;
+    box-shadow: 0 0 70px rgba(0, 230, 184, 0.9);
+    opacity: 0.95;
+    /* Blend the video more strongly with the background so it feels like one element */
+    mix-blend-mode: overlay;
 }
 
 .btn {
