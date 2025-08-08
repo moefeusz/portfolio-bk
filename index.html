@@ -193,14 +193,15 @@
         <div class="container">
             <h2 class="section-title">Hack&nbsp;the&nbsp;Code</h2>
             <p class="section-desc">Masz trzy próby, aby odgadnąć 5‑znakowy kod. Podpowiedź: ksywka od nazwiska.</p>
-            <div id="terminal" class="terminal">
-                <div id="terminal-output" class="terminal-output"></div>
-                <div class="terminal-input-row">
-                    <span class="prompt">&gt;</span>
-                    <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" placeholder="wpisz kod...">
-                    <button id="terminal-btn" class="btn btn-secondary">OK</button>
-                </div>
-            </div>
+              <div id="terminal" class="terminal">
+                  <div id="terminal-output" class="terminal-output"></div>
+                  <div class="terminal-input-row">
+                      <label for="terminal-input">Kod</label>
+                      <span class="prompt">&gt;</span>
+                      <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" placeholder="wpisz kod...">
+                      <button id="terminal-btn" class="btn btn-secondary">OK</button>
+                  </div>
+              </div>
         </div>
     </section>
 
@@ -209,12 +210,18 @@
         <div class="container">
             <h2 class="section-title">Kontakt</h2>
             <p class="section-desc">Masz pomysł na projekt lub chcesz zadać pytanie? Skontaktuj się ze mną!</p>
-            <form id="contact-form" class="contact-form">
-                <input type="text" name="name" placeholder="Imię i nazwisko" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <textarea name="message" placeholder="Wiadomość" required></textarea>
-                <button type="submit" class="btn btn-primary">Wyślij</button>
-            </form>
+              <form id="contact-form" class="contact-form">
+                  <label for="contact-name">Imię i nazwisko</label>
+                  <input type="text" id="contact-name" name="name" placeholder="Imię i nazwisko" required>
+
+                  <label for="contact-email">Email</label>
+                  <input type="email" id="contact-email" name="email" placeholder="Email" required>
+
+                  <label for="contact-message">Wiadomość</label>
+                  <textarea id="contact-message" name="message" placeholder="Wiadomość" required></textarea>
+
+                  <button type="submit" class="btn btn-primary">Wyślij</button>
+              </form>
         </div>
     </section>
 
