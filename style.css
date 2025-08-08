@@ -63,7 +63,8 @@ a:hover {
 .logo-video {
     /* Enlarge the video logo and blend it with the background */
     /* Make the video logo much larger and let it blend seamlessly with the hero background. */
-    width: 480px;
+    width: 100%;
+    max-width: 480px;
     height: auto;
     margin: 0 auto 2.5rem auto;
     display: block;
@@ -368,5 +369,15 @@ a:hover {
     .nav ul {
         flex-wrap: wrap;
         gap: 1rem;
+    }
+    .logo-video {
+        max-width: 320px;
+        width: 90%;
+    }
+    .cards-row {
+        grid-template-columns: 1fr;
+    }
+    .project-img {
+        height: auto;
     }
 }
