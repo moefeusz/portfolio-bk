@@ -61,15 +61,16 @@ a:hover {
 /* Video logo in hero section */
 .logo-video {
     /* Enlarge the video logo and blend it with the background */
-    width: 350px;
+    /* Make the video logo much larger and let it blend seamlessly with the hero background. */
+    width: 480px;
     height: auto;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 2.5rem auto;
     display: block;
-    border-radius: 16px;
-    box-shadow: 0 0 70px rgba(0, 230, 184, 0.9);
-    opacity: 0.95;
-    /* Blend the video more strongly with the background so it feels like one element */
-    mix-blend-mode: overlay;
+    border-radius: 20px;
+    box-shadow: 0 0 100px rgba(0, 230, 184, 0.9);
+    opacity: 0.92;
+    /* Use screen blending so the green glow feels like part of the background */
+    mix-blend-mode: screen;
 }
 
 .btn {
@@ -97,7 +98,7 @@ a:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     border: 2px solid var(--primary-color);
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: 600;
 }
 
@@ -162,7 +163,8 @@ a:hover {
     margin: 0;
     padding: 0.5rem 1rem;
     display: flex;
-    justify-content: center;
+    /* Align navigation items to the right to avoid the centered look */
+    justify-content: flex-end;
     gap: 2rem;
 }
 
@@ -227,8 +229,9 @@ a:hover {
 }
 
 .card, .project-card {
-    background-color: var(--card-bg);
-    border-radius: 8px;
+    /* Use a subtle gradient background to give pricing cards more depth */
+    background: linear-gradient(135deg, var(--card-bg) 0%, var(--card-bg-alt) 100%);
+    border-radius: 12px;
     padding: 2rem 1.5rem;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -257,6 +260,8 @@ a:hover {
 .project-card {
     padding: 0;
     overflow: hidden;
+    /* Override the gradient background for project cards so only pricing cards get the gradient */
+    background: transparent;
 }
 
 .project-img {
