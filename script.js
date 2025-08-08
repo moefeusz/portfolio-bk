@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleGuess() {
         const guess = input.value.trim();
         if (!guess) return;
-        printLine('> ' + guess, varColor('#00e6b8'));
+        printLine('> ' + guess, '#00e6b8');
         input.value = '';
         // Easter egg trigger
         if (guess.toLowerCase() === 'konki') {
@@ -209,11 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(style);
-
-    // Helper to ensure colour variables accessible in code messages
-    function varColor(color) {
-        return color;
-    }
 
     button.addEventListener('click', handleGuess);
     input.addEventListener('keydown', (e) => {
