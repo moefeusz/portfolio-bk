@@ -22,6 +22,11 @@ export default function Hero() {
         <p className="hero__subtitle">
           Szybkie, nowoczesne, dopieszczone pod Core Web Vitals.
         </p>
+        {/* CTA buttons */}
+        <div className="hero__cta" role="group" aria-label="Główne akcje">
+          <a className="btn btn--primary" href="#kontakt">Zamów wycenę</a>
+          <a className="btn btn--ghost" href="#projekty">Zobacz projekty</a>
+        </div>
       </div>
       <div className="hero__peek" />
     </section>
