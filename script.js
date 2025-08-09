@@ -2,22 +2,6 @@
 const MOTION_LEVEL = 'M';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Animacja "typing" – wypisywanie zmieniających się ról
-  const roles = ['Front-end Developer', '3D Designer', 'UI/UX Enthusiast'];
-  const typedTextEl = document.getElementById('typed-text');
-  let i = 0, pos = 0, dir = 1, hold = 0;
-  const tick = () => {
-    if (!typedTextEl) return;
-    if (hold > 0) { hold--; requestAnimationFrame(tick); return; }
-    const txt = roles[i];
-    pos += dir;
-    typedTextEl.textContent = txt.slice(0, pos);
-    if (pos === txt.length) { dir = -1; hold = 45; }            // chwilowa pauza po napisaniu całego słowa
-    if (pos === 0 && dir === -1) { dir = 1; i = (i + 1) % roles.length; hold = 20; }  // pauza przed rozpoczęciem kolejnego słowa
-    requestAnimationFrame(tick);
-  };
-  tick();
-
   // Pojawianie się elementów w momencie przewijania (reveal)
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -29,26 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.1, rootMargin: "0px 0px -10% 0px" });
   document.querySelectorAll('.reveal, .section, .card, .pricing-card, .project-card')
           .forEach(el => observer.observe(el));
-
-  // Paralaksa dla tła hero (przesuwanie wideo przy scrollu)
-  const heroSection = document.querySelector('.hero');
-  const heroBg = document.querySelector('.hero-bg');
-  let lastY = 0;
-  function onScroll() {
-    if (!heroSection || !heroBg) return;
-    const rect = heroSection.getBoundingClientRect();
-    const scrollProgress = Math.min(1, Math.max(0, 1 - (rect.top / rect.height)));
-    const scaleBoost = (MOTION_LEVEL === 'L' ? 0.06 : MOTION_LEVEL === 'M' ? 0.04 : 0.02);
-    const offsetY = rect.top * -0.06;
-    if (Math.abs(offsetY - lastY) < 0.5) return; // nie aktualizuj przy minimalnych zmianach (dla wydajności)
-    heroBg.style.transform = `translate3d(0, ${offsetY}px, 0)`;
-    heroBg.querySelectorAll('video').forEach(v => {
-      v.style.transform = `scale(${1.04 + scaleBoost * scrollProgress})`;
-    });
-    lastY = offsetY;
-  }
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
 
   // Efekt "magnesu" na przyciskach (przyciąganie do kursora)
   document.querySelectorAll('.magnet').forEach(btn => {
