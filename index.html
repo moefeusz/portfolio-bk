@@ -15,26 +15,27 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="src/components/hero.css" />
 </head>
-<body>
+<body id="top">
+  <a href="#main-content" class="skip-link">Pomiń nawigację</a>
   <!-- Efekt "aura" wokół kursora -->
   <div class="cursor-aura" aria-hidden="true"></div>
 
   <!-- NAVBAR -->
   <header class="nav">
     <div class="container nav-inner">
-      <a href="#" class="brand">BK</a>
+      <a href="#top" class="brand">BK</a>
       <!-- Przycisk hamburger (widoczny na mobile) -->
       <button class="nav-toggle material-icons" aria-label="Toggle menu">menu</button>
       <nav class="menu">
         <a href="#about">O mnie</a>
         <a href="#pricing">Cennik</a>
-        <a href="#projects">Projekty</a>
+        <a href="#projekty">Projekty</a>
         <a href="#game">Hack the Code</a>
-        <a href="#contact">Kontakt</a>
+        <a href="#kontakt">Kontakt</a>
       </nav>
     </div>
   </header>
-
+  <main id="main-content">
   <!-- HERO SECTION -->
   <section class="hero">
     <div class="hero__overlay" aria-hidden="true"></div>
@@ -52,6 +53,10 @@
       <p class="hero__subtitle">
         Szybkie, nowoczesne, dopieszczone pod Core Web Vitals.
       </p>
+      <div class="hero__cta" role="group" aria-label="Główne akcje">
+        <a class="btn btn--primary" href="#kontakt">Zamów wycenę</a>
+        <a class="btn btn--ghost" href="#projekty">Zobacz projekty</a>
+      </div>
     </div>
     <div class="hero__peek"></div>
   </section>
@@ -74,28 +79,28 @@
           <h3>Strona WWW</h3>
           <p>Landing page z animacjami i SEO.</p>
           <div class="price">600 zł</div>
-          <a href="#contact" class="btn btn-primary">Wybierz pakiet →</a>
+          <a href="#kontakt" class="btn btn-primary">Wybierz pakiet →</a>
         </div>
         <div class="pricing-card card">
           <div class="icon material-icons">3d_rotation</div>
           <h3>Projekt 3D</h3>
           <p>Wnętrza lub produkt – realizm i oświetlenie.</p>
           <div class="price">od 900 zł</div>
-          <a href="#contact" class="btn btn-primary">Wybierz pakiet →</a>
+          <a href="#kontakt" class="btn btn-primary">Wybierz pakiet →</a>
         </div>
         <div class="pricing-card card">
           <div class="icon material-icons">design_services</div>
           <h3>Logo</h3>
           <p>Logotyp + podstawowa księga znaku.</p>
           <div class="price">od 700 zł</div>
-          <a href="#contact" class="btn btn-primary">Wybierz pakiet →</a>
+          <a href="#kontakt" class="btn btn-primary">Wybierz pakiet →</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PROJECTS SECTION -->
-  <section id="projects" class="section reveal">
+  <section id="projekty" class="section reveal">
     <div class="container">
       <h2 class="section-title">Projekty</h2>
       <!-- Filtrowanie projektów -->
@@ -108,31 +113,31 @@
       <div class="cards-grid">
         <!-- Karty projektów z obrazkami -->
         <div class="project-card card" data-category="aranżacje">
-          <img class="project-img" src="realizacja_balkon_ok.png" alt="Balkon industrialny – wizualizacja 3D">
+          <img class="project-img" src="realizacja_balkon_ok.png" alt="Balkon industrialny – wizualizacja 3D" loading="lazy" width="1024" height="1024">
           <div class="project-info">
             <h3>Balkon industrialny</h3>
           </div>
         </div>
         <div class="project-card card" data-category="aranżacje">
-          <img class="project-img" src="realizacja_kuchnia_minimalistyczna.png" alt="Kuchnia minimalistyczna – wizualizacja 3D">
+          <img class="project-img" src="realizacja_kuchnia_minimalistyczna.png" alt="Kuchnia minimalistyczna – wizualizacja 3D" loading="lazy" width="1024" height="1024">
           <div class="project-info">
             <h3>Kuchnia minimalistyczna</h3>
           </div>
         </div>
         <div class="project-card card" data-category="logo">
-          <img class="project-img" src="realizacja_logo_higtech.png" alt="Logo HighTech – projekt logotypu">
+          <img class="project-img" src="realizacja_logo_hightech.png" alt="Logo HighTech – projekt logotypu" loading="lazy" width="1024" height="1024">
           <div class="project-info">
             <h3>Logo HighTech</h3>
           </div>
         </div>
         <div class="project-card card" data-category="logo">
-          <img class="project-img" src="logo_100.png" alt="Logo BK – projekt logotypu">
+          <img class="project-img" src="logo_100.png" alt="Logo BK – projekt logotypu" loading="lazy" width="100" height="100">
           <div class="project-info">
             <h3>Logo BK</h3>
           </div>
         </div>
         <div class="project-card card" data-category="www">
-          <img class="project-img" src="realizacja_www_placeholder.png" alt="Strona WWW – projekt strony internetowej">
+          <img class="project-img" src="project3.png" alt="Strona WWW – projekt strony internetowej" loading="lazy" width="1536" height="1024">
           <div class="project-info">
             <h3>Strona WWW</h3>
           </div>
@@ -159,12 +164,13 @@
   </section>
 
   <!-- CONTACT SECTION -->
-  <section id="contact" class="section reveal">
+  <section id="kontakt" class="section reveal">
     <div class="container">
       <h2 class="section-title">Kontakt</h2>
-      <p>Masz pytania lub chcesz podjąć współpracę? Napisz: <a href="mailto:hello@twojmail.pl">hello@mojadomena.pl</a></p>
+      <p>Masz pytania lub chcesz podjąć współpracę? Napisz: <a href="mailto:hello@mojadomena.pl">hello@mojadomena.pl</a></p>
     </div>
   </section>
+  </main>
 
   <footer class="footer">
     <div class="container">© 2025 BK – Wszelkie prawa zastrzeżone.</div>
