@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- Główny arkusz stylów -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="src/components/hero.css" />
 </head>
 <body>
   <!-- Efekt "aura" wokół kursora -->
@@ -36,18 +37,23 @@
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <!-- Tło hero z animowanym logo wideo -->
-    <div class="hero-bg">
-      <video src="hero_logo_video.mp4" poster="hero_poster.jpg" autoplay muted loop playsinline></video>
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <video
+        class="hero__logo"
+        src="hero_logo_video.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        aria-label="Animowane logo BK"
+      ></video>
+      <h1 class="hero__title">Tworzę strony internetowe i wizualizacje 3D</h1>
+      <p class="hero__subtitle">
+        Szybkie, nowoczesne, dopieszczone pod Core Web Vitals.
+      </p>
     </div>
-    <div class="hero-content reveal">
-      <h1 class="hero-title">Bartłomiej Konkel</h1>
-      <h2 id="typed-text" class="hero-subtitle"></h2>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary magnet">Zobacz projekty</a>
-        <a href="#contact" class="btn btn-ghost">Kontakt</a>
-      </div>
-    </div>
+    <div class="hero__peek"></div>
   </section>
 
   <!-- ABOUT SECTION -->

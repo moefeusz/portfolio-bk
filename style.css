@@ -78,57 +78,6 @@ a { color: inherit; text-decoration: none; }
   font-size: 28px;
   cursor: pointer;
 }
-/* HERO */
-.hero {
-  position: relative;
-  min-height: 82vh;
-  display: grid;
-  place-items: center;
-  padding-top: 60px;  /* przestrzeń na fixed nav */
-  text-align: center;
-}
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-}
-/* Wideo tła hero */
-.hero-bg video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  opacity: 0.9;
-  mix-blend-mode: screen;
-  transform: scale(1.04);
-  animation: heroZoom 6s ease-in-out infinite alternate;
-}
-/* Animacja delikatnego powiększania tła */
-@keyframes heroZoom {
-  from { transform: scale(1.04); }
-  to   { transform: scale(1.08); }
-}
-.hero-content {
-  padding: 6rem 1.2rem 3rem;
-}
-.hero-title {
-  font-size: clamp(38px, 7vw, 64px);
-  line-height: 1.05;
-}
-.hero-subtitle {
-  margin-top: 0.6rem;
-  color: var(--acc);
-  min-height: 1.2em;
-}
-/* CTA buttons w hero */
-.hero-cta {
-  margin-top: 1.4rem;
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 /* SECTION GENERIC */
 .section {
   padding: 90px 0 70px;
